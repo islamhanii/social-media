@@ -75,7 +75,6 @@ class UserTest extends TestCase
     public function test_user_can_resets_his_password()
     {
         $response = $this->postJson("/api/resetPassword", [
-            'current_password' => '12345678',
             'password' => '123456789',
             'password_confirmation' => '123456789',
         ]);
